@@ -1,0 +1,7 @@
+.nav_bar_profile {
+  display: flex !important;
+  align-items: center;
+}
+.nav_bar_profile a {
+    margin-right: 8px;
+}

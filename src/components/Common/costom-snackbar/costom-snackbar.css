@@ -1,0 +1,31 @@
+.custom-snackbar {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #323232;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  z-index: 9999;
+}
+.custom-snackbar span {
+  color: white !important;
+}
+.custom-snackbar.info {
+  background-color: #2196f3;
+}
+
+.custom-snackbar.success {
+  background-color: #4caf50;
+}
+
+.custom-snackbar.warning {
+  background-color: #ff9800;
+}
+
+.custom-snackbar.error {
+  background-color: #f44336;
+}

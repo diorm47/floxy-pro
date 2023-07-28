@@ -1,0 +1,33 @@
+#status_btn {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80px;
+  border-radius: 10px;
+  color: #fff !important;
+}
+
+.status_btn p {
+  font-style: normal;
+
+  font-size: 9.75px;
+  line-height: 15px;
+  color: #ffffff !important;
+  text-align: center;
+}
+
+.pro_color {
+  background: #34c38f;
+}
+.trial_color {
+  background: #f1b44c;
+}
+
+.advanced_color {
+  background: #f46a6a;
+}
+
+.base_color {
+  background: #6a7187;
+}

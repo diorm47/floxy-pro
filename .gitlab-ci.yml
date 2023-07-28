@@ -1,0 +1,35 @@
+# опредление образа, на котором будет работать ci/cd пайплайн
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+ 
+stages:
+  - build
+
+# Определение сборки приложения    
+build:
+  stage: build
+  
+  cache:
+    key: "$CI_COMMIT_REF_SLUG"
+    paths:
+      - node_modules/
+    policy: pull
+
+  before_script:
+    - apt-get update -y
+    - apt-get install -y rsync sshpass
+    #Передаем пароль из переменной окружения
+    - export SSHPASS=$SSH_PSWD
+    - mkdir -p ~/.ssh/
+    - ssh-keyscan $SSH_SERVER >> ~/.ssh/known_hosts
+
+  script:
+    - ls -la ./node_modules/
+    - node --max-old-space-size=4096 $(yarn bin vite) build # Добавление флага в команду для сборки в процессе сборки проекта Vite
+    - rsync --delete-after --recursive --links --owner --group --times --verbose --chmod=D0755,F0644 --rsh="sshpass -e ssh -o StrictHostKeyChecking=no" --exclude '.git' --exclude '.gitlab-ci.yml' ./dist/ $SSH_USER@$SSH_SERVER:floxy.pro/
+ 
+  only:
+    - test

@@ -1,0 +1,36 @@
+.metismenu li .status_need {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.black_back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0000005a;
+  z-index: 1000;
+  display: none;
+}
+
+.toggle_layout i {
+  font-size: 23px;
+}
+.toggle_layout {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+}
+.toggle_layout:hover {
+  transition: all 0.4s ease;
+  background: #475271;
+  cursor: pointer;
+}

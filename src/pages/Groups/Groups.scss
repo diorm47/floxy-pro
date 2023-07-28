@@ -1,0 +1,523 @@
+@import "../../assets/scss/theme.scss";
+
+.groups-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 50px;
+
+  @media (max-width: 1700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.groups-item {
+  background: #ffffff;
+  box-shadow: 0px 12px 24px rgba(18, 38, 63, 0.0313726);
+  border-radius: 4px;
+}
+
+.no-events {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 500;
+  border: 1px solid #a6b0cf;
+  border-radius: 4px;
+  width: 100%;
+  color: #8c8d8e;
+}
+
+.wrapper-header {
+  margin-bottom: 24px;
+}
+
+.group-statistic {
+  gap: 15px;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.group-events {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin: 12px 0 7px;
+
+  .group-event-item {
+    border: 1px solid $blue;
+    padding: 8px 5px;
+    text-align: center;
+    border-radius: 4px;
+    background: $white;
+    user-select: none;
+    font-size: 13px;
+    color: $blue;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+[data-layout-mode="dark"] .group-events .group-event-item {
+  background: #2a3042 !important;
+}
+
+.groups-settings-btn {
+  margin: 5px 0 15px;
+}
+
+.group-queue {
+  margin: 12px 0 20px;
+  width: 100%;
+  font-size: 13px;
+  color: $gray-700;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.modal-btn-footer {
+  padding: 8px 13px;
+}
+
+.groups-settings-input-wrapper {
+  width: 50%;
+  gap: 5px;
+}
+
+.message-wrapper {
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.event-queue {
+  margin-bottom: 20px;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.events-settings-btn {
+  padding-left: 61px !important;
+  padding-right: 61px !important;
+
+  button {
+    margin-right: 33.5px;
+    color: $blue;
+  }
+
+  &:hover {
+    button {
+      color: $white;
+    }
+  }
+}
+
+// .css-t3ipsp-control {
+//   div {
+//     background: $white !important;
+//   }
+// }
+
+.group-settings-textarea {
+  resize: none;
+  background: $white;
+  border: 1px solid $gray-400;
+  border-radius: 0px 4px 4px 4px;
+  height: 144px !important;
+}
+
+.group-settings-pin-btn {
+  background: $gray-200;
+  border: 1px solid $gray-200;
+  border-radius: 4px;
+  color: $blue;
+  padding: 20px 0;
+}
+
+.group-settings-pin-item {
+  padding: 10px;
+  border: 2px dashed $gray-400;
+  position: relative;
+  padding-top: 40px;
+}
+
+.group-settings-modal-btn {
+  background: $gray-200;
+  margin-top: 11px;
+  border: 1px solid $gray-200;
+  border-radius: 4px;
+  padding: 10px 0;
+  color: $black;
+}
+
+.messages-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.add_groups {
+  height: 38px;
+  width: 100%;
+  background: #f3f3f9;
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 12px;
+}
+.add_groups input,
+.add_groups button {
+  width: 100%;
+  height: 100%;
+  margin-left: 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.add_groups button {
+  width: 100px;
+  margin-left: 12px;
+  border-left: 1px solid #b0afaf;
+  cursor: pointer;
+}
+
+.add_groups i {
+  cursor: pointer;
+}
+.add_group_suggest_item {
+  padding: 8px 10px;
+  border-bottom: 0.4px solid #eaecec;
+}
+.add_group_suggest_item img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.add_group_suggest_item p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: #495057;
+}
+
+.confirm_gr_add {
+  width: 100%;
+  border: 1px solid #a6b0cf;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 4px 0;
+}
+
+.link_underline {
+  color: #556ee6;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-bottom: 8px !important;
+}
+
+.text_margin {
+  margin-top: 5px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+
+  color: #74788d;
+}
+
+.bots-settings-wrapper {
+  overflow-x: hidden !important;
+}
+
+.bots-settings-wrapper::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+.bots-settings-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+// #react-select-3-listbox::-webkit-scrollbar {
+//   width: 2px !important;
+//   background-color: transparent !important;
+// }
+// #react-select-3-listbox::-webkit-scrollbar-thumb {
+//   background: rgba(0, 0, 0, 0.2) !important;
+//   border-radius: 5px !important;
+// }
+
+.redirect_mailing {
+  min-width: 250px;
+}
+
+.mailing_settings {
+  margin-bottom: 70px;
+}
+
+.add_new_mess {
+  display: flex !important;
+  align-items: center !important;
+}
+.add_new_mess div {
+  margin-right: 10px;
+}
+
+.mailing_interval div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mailing_interval div input {
+  width: 150px;
+}
+
+.mailing_settings .form-check-label {
+  color: #74788d;
+  margin-right: 20px;
+  margin-left: 6px;
+}
+
+.mess_wrap_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remove_btn_mess {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+}
+
+.packet_name {
+  margin: 8px 0 5px;
+}
+.modal_main_text {
+  margin-bottom: 7px;
+}
+.remove-pack-btn {
+  border: none;
+  background: transparent;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 14px !important;
+  height: 14px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.remove-pack-btn img {
+  width: 14px !important;
+  height: 14px !important;
+  color: #ced4da;
+  fill: #ced4da;
+}
+.attachment-field {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.attachment-field-wrapper {
+  flex-direction: column;
+}
+.topup-modal-footer {
+  padding: var(--bs-modal-padding);
+}
+.attachment-field-wrapper button {
+  margin-left: 5px;
+}
+
+.error_message {
+  color: red;
+}
+.switch_id_path,
+.mailing_enabled {
+  min-width: 115px;
+}
+.bots-settings-text {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 90% !important;
+}
+
+.disactive {
+  background: hsl(0, 0%, 95%) !important;
+}
+// .disactive div {
+//   background: #EFF2F7 !important;
+// }
+
+@media (max-width: 900px) {
+  .groups-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .groups-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .mailings_lists {
+    width: 100% !important;
+  }
+  .custom-mailing-interval-wrappper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .mailing_top_items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mailing_top_items .mailings_list {
+    width: 100%;
+  }
+  .mailing_top_items .bots-settings-create {
+    max-width: 170px;
+    height: 36px;
+    margin: 0;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+
+  .mailing_top_items .btn-danger {
+    max-width: 120px;
+    height: 36px;
+    margin-top: 20px;
+  }
+}
+.text_toggler input {
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: #74788d;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.text_toggler {
+  position: relative;
+}
+.text_toggler .active-tab {
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: 0;
+  color: #556ee6;
+
+  position: relative;
+  bottom: -2px;
+}
+
+.filter_fields {
+  margin-top: 15px;
+}
+
+.filter_select {
+  width: 78px !important;
+  height: 36px;
+  margin: 0 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.add_filter_fields {
+  background: #556EE6;
+}
+
+@media (max-width: 430px) {
+  .flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flexColumn .flex-grow-1,
+  .flexColumn .events-settings-btn {
+    width: 100% !important;
+  }
+  .redirect_mailing {
+    min-width: 200px;
+  }
+  .main_mailing_width {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .message-wrapper {
+    padding: 10px;
+  }
+}
+[data-layout-mode="dark"] .text_toggler .active-tab {
+  background: #2a3042 !important;
+}
+
+[data-layout-mode="dark"] .css-13cymwt-control {
+  background: #2a3042 !important;
+}
+[data-layout-mode="dark"] .group-settings-pin-btn {
+  background: #2a3042 !important;
+}
+[data-layout-mode="dark"] .modal-body .group-settings-modal-btn {
+  background: #2a3042 !important;
+  color: #a6b0cf;
+}
+[data-layout-mode="dark"] .add_groups {
+  background: #3b4564 !important;
+}
+[data-layout-mode="dark"] .add_groups button {
+  color: #a6b0cf;
+}
+[data-layout-mode="dark"] .mailing_title input {
+  color: #a6b0cf;
+}
+[data-layout-mode="dark"] .topup-modal-input {
+  color: #a6b0cf;
+}
+[data-layout-mode="dark"] .bots-settings-bot.active {
+  background: rgba(115, 144, 184, 0.1) !important;
+}
+[data-layout-mode="dark"] .css-1y7rh0y-MultiValueGeneric2 {
+  color: #a6b0cf;
+}
+[data-layout-mode="dark"] .mailing_message textarea {
+  color: #afb8d4;
+}
+[data-layout-mode="dark"]
+  .redirect_mailing
+  .css-3iigni-container
+  .css-16xfy0z-control {
+  background-color: #2a3042 !important;
+}
+[data-layout-mode="dark"]
+  .logic_bot
+  .css-3iigni-container
+  .css-16xfy0z-control {
+  background-color: #2a3042 !important;
+}

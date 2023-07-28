@@ -1,0 +1,15 @@
+module.exports = {
+  arrowParens: "avoid",
+  endOfLine: "lf",
+  printWidth: 70,
+  doubleQuote: true,
+  jsxDoubleQuote: true,
+  tabWidth: 2,
+  trailingComma: "es5",
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
+  semi: false,
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+  organizeImportsSkipDestructiveCodeActions: true,
+}
